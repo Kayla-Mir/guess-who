@@ -4,6 +4,7 @@ $(document).ready(onReady);
 
 function onReady(){
     renderPictures(people);
+    renderPersonsName();
     $('.test').on('click', alertUser);
 }
 
@@ -22,8 +23,12 @@ function alertUser() {
     alert('nice');
 }
 
-function renderPersonsName(min, max) {
-    let min = 0;
-    let max = people.length;
+function randomNumber(min, max) {
+    min = 0;
+    max = people.length - 1;
     return Math.floor(Math.random() * (1 + max - min) + min);
+}
+
+function renderPersonsName() {
+    $('#random-person').append(`${people[randomNumber()].name}`)
 }
