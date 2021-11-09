@@ -25,10 +25,8 @@ function alertUser() {
     if (randomPerson === $(this).data().id) {
         alert('Good Job!');
         location.reload();
-    } else if (randomPerson != $(this).data().id) {
-        alert('Try Again!');
     } else {
-        console.log('what'); 
+        alert('Try Again!');
     }
 }
 
